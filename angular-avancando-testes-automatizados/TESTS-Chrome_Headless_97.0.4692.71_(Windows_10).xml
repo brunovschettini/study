@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 97.0.4692.71 (Windows 10)" package="" timestamp="2022-01-07T15:10:26" id="0" hostname="DESKTOP-OH5OBSV" tests="23" errors="0" failures="2" time="0.267">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36"/>
+  </properties>
+  <testcase name="PhotoFrameComponent #like should trigger (@output liked) two times when called outside debounce time)" time="0.065" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display number of likes when  (@output liked)  is incrementede" time="0.006" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent should create componente" time="0.006" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image with src and description when bound to properties" time="0.005" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like should trigger (@output liked) once when called multiple times within debounce time)" time="0.005" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria-label when (@output liked) is incrementede" time="0.007" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria-label with 0 (@output liked) value" time="0.007" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="ActionDirective (D) (@Output appAction()) should emit event with payload when ENTER key is pressed" time="0.011" classname="Chrome_Headless_97_0_4692_71_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective (D) (@Output appAction()) should emit event with payload when clicked" time="0.008" classname="Chrome_Headless_97_0_4692_71_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective should create an instance" time="0.003" classname="Chrome_Headless_97_0_4692_71_(Windows_10).ActionDirective"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.001" classname="Chrome_Headless_97_0_4692_71_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0.001" classname="Chrome_Headless_97_0_4692_71_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0.001" classname="Chrome_Headless_97_0_4692_71_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Chrome_Headless_97_0_4692_71_(Windows_10).UniqueIdService"/>
+  <testcase name="PhotoBoardService should be created" time="0.097" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoBoardService">
+    <failure type="">NullInjectorError: R3InjectorError(DynamicTestModule)[PhotoBoardService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'PhotoBoardService', 'HttpClient', 'HttpClient' ] })
+NullInjectorError: R3InjectorError(DynamicTestModule)[PhotoBoardService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+    at NullInjector.get (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1005:1)
+    at R3Injector.get (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11512:1)
+    at R3Injector.get (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11512:1)
+    at injectInjectorOnly (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:891:1)
+    at ɵɵinject (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:895:1)
+    at Object.PhotoBoardService_Factory [as factory] (ng:///PhotoBoardService/ɵfac.js:5:45)
+    at R3Injector.hydrate (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11680:1)
+    at R3Injector.get (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11501:1)
+    at NgModuleRef$1.get (node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:24945:1)
+    at TestBedRender3.inject (node_modules/@angular/core/fesm2015/testing.js:1943:1)
+</failure>
+    <failure type="">Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/shared/components/photo-board/services/photo-board.service.spec.ts:14:21)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:364:1)
+    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:292:1)
+</failure>
+  </testcase>
+  <testcase name="LikeWidgetComponent (D) should display number of likes when clicked" time="0.008" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent (D) should display number of likes when ENTER KEY PRESSED" time="0.006" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.005" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.006" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.005" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.004" classname="Chrome_Headless_97_0_4692_71_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="PhotoBoardComponent should create" time="0.006" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoBoardComponent"/>
+  <testcase name="PhotoBoardComponent Should display and columns when (@Input photos) has value" time="0.003" classname="Chrome_Headless_97_0_4692_71_(Windows_10).PhotoBoardComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'length')
+    at PhotoBoardComponent.groupColumns (src/app/shared/components/photo-board/photo-board.component.ts:28:40)
+    at PhotoBoardComponent.ngOnChanges (src/app/shared/components/photo-board/photo-board.component.ts:21:24)
+    at UserContext.&lt;anonymous&gt; (src/app/shared/components/photo-board/photo-board.component.spec.ts:45:15)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:364:1)
+    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:292:1)
+    at ZoneDelegate.invoke (node_modules/zone.js/dist/zone-evergreen.js:363:1)
+    at Zone.run (node_modules/zone.js/dist/zone-evergreen.js:123:1)
+    at runInTestZone (node_modules/zone.js/dist/zone-testing.js:545:1)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/dist/zone-testing.js:560:1)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

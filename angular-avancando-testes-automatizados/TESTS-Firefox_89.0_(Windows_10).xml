@@ -1,23 +1,91 @@
 <?xml version="1.0"?>
-<testsuite name="Firefox 89.0 (Windows 10)" package="" timestamp="2021-11-03T14:32:37" id="0" hostname="DESKTOP-OH5OBSV" tests="15" errors="0" failures="0" time="0.153">
+<testsuite name="Firefox 89.0 (Windows 10)" package="" timestamp="2022-01-07T15:10:25" id="0" hostname="DESKTOP-OH5OBSV" tests="23" errors="0" failures="2" time="0.226">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"/>
   </properties>
-  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.029" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
-  <testcase name="PhotoFrameComponent should create componente" time="0.039" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent (D) Should display number of likes when  (@output liked)  is incrementede" time="0.014" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent #like should trigger (@output liked) once when called multiple times within debounce time)" time="0.014" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent (D) Should have aria-label with 0 (@output liked) value" time="0.011" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent (D) Should update aria-label when (@output liked) is incrementede" time="0.01" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent #like should trigger (@output liked) two times when called outside debounce time)" time="0.009" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
-  <testcase name="PhotoFrameComponent (D) Should display image with src and description when bound to properties" time="0.007" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image with src and description when bound to properties" time="0.072" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria-label with 0 (@output liked) value" time="0.014" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like should trigger (@output liked) two times when called outside debounce time)" time="0.013" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like should trigger (@output liked) once when called multiple times within debounce time)" time="0.011" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria-label when (@output liked) is incrementede" time="0.011" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display number of likes when  (@output liked)  is incrementede" time="0.011" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent should create componente" time="0.01" classname="Firefox_89_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoBoardService should be created" time="0.004" classname="Firefox_89_0_(Windows_10).PhotoBoardService">
+    <failure type="">NullInjectorError: R3InjectorError(DynamicTestModule)[PhotoBoardService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient! in vendor.js (line 50289)
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'PhotoBoardService', 'HttpClient', 'HttpClient' ] })
+get@vendor.js:50289:27
+get@vendor.js:60796:33
+get@vendor.js:60796:33
+injectInjectorOnly@vendor.js:50175:33
+ɵɵinject@vendor.js:50179:57
+PhotoBoardService_Factory@ng:///PhotoBoardService/ɵfac.js:5:45
+hydrate@vendor.js:60964:35
+get@vendor.js:60785:33
+get@vendor.js:74229:33
+inject@vendor.js:32777:52
+inject@vendor.js:32702:37
+wUJa/&lt;/&lt;@main.js:989:81
+invoke@polyfills.js:3059:30
+QpwO/&lt;/&lt;/ProxyZoneSpec.prototype.onInvoke@vendor.js:43772:43
+invoke@polyfills.js:3058:36
+run@polyfills.js:2818:47
+runInTestZone@vendor.js:44025:38
+wrapTestInZone/&lt;@vendor.js:44040:24
+&lt;Jasmine&gt;
+invokeTask@polyfills.js:3094:35
+runTask@polyfills.js:2862:51
+drainMicroTaskQueue@polyfills.js:3264:39
+</failure>
+    <failure type="">Expected undefined to be truthy.
+&lt;Jasmine&gt;
+wUJa/&lt;/&lt;@main.js:992:25
+invoke@polyfills.js:3059:30
+QpwO/&lt;/&lt;/ProxyZoneSpec.prototype.onInvoke@vendor.js:43772:43
+invoke@polyfills.js:3058:36
+run@polyfills.js:2818:47
+runInTestZone@vendor.js:44025:38
+wrapTestInZone/&lt;@vendor.js:44040:24
+&lt;Jasmine&gt;
+invokeTask@polyfills.js:3094:35
+runTask@polyfills.js:2862:51
+drainMicroTaskQueue@polyfills.js:3264:39
+</failure>
+  </testcase>
+  <testcase name="PhotoBoardComponent should create" time="0.009" classname="Firefox_89_0_(Windows_10).PhotoBoardComponent"/>
+  <testcase name="PhotoBoardComponent Should display and columns when (@Input photos) has value" time="0.006" classname="Firefox_89_0_(Windows_10).PhotoBoardComponent">
+    <failure type="">TypeError: photos is undefined in main.js (line 307)
+groupColumns@main.js:307:29
+ngOnChanges@main.js:301:30
+OATz/&lt;/&lt;@main.js:669:19
+invoke@polyfills.js:3059:30
+QpwO/&lt;/&lt;/ProxyZoneSpec.prototype.onInvoke@vendor.js:43772:43
+invoke@polyfills.js:3058:36
+run@polyfills.js:2818:47
+runInTestZone@vendor.js:44025:38
+wrapTestInZone/&lt;@vendor.js:44040:24
+&lt;Jasmine&gt;
+invoke@polyfills.js:3059:30
+run@polyfills.js:2818:47
+scheduleResolveOrReject/&lt;@polyfills.js:3552:40
+invokeTask@polyfills.js:3094:35
+runTask@polyfills.js:2862:51
+drainMicroTaskQueue@polyfills.js:3264:39
+</failure>
+  </testcase>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.01" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent (D) should display number of likes when clicked" time="0.007" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent (D) should display number of likes when ENTER KEY PRESSED" time="0.011" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.009" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.005" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
   <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.004" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent Should create component" time="0.004" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.006" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.006" classname="Firefox_89_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="ActionDirective (D) (@Output appAction()) should emit event with payload when ENTER key is pressed" time="0.008" classname="Firefox_89_0_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective should create an instance" time="0.003" classname="Firefox_89_0_(Windows_10).ActionDirective"/>
+  <testcase name="ActionDirective (D) (@Output appAction()) should emit event with payload when clicked" time="0.005" classname="Firefox_89_0_(Windows_10).ActionDirective"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.001" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0.001" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Firefox_89_0_(Windows_10).UniqueIdService"/>
   <system-out>
     <![CDATA[
 ]]>
