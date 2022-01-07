@@ -1,6 +1,4 @@
-import { PhotoBoardModule } from './shared/components/photo-board/photo-board.module';
-import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
-
+import { PhotoListModule } from './components/photo-list/photo-list.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,14 +8,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    PhotoFrameModule,
-    PhotoBoardModule,
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PhotoListModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -10,4 +10,5 @@ import { PhotoBoardComponent } from './photo-board.component';
   exports: [PhotoBoardComponent],
   providers: [PhotoBoardService],
 })
+
 export class PhotoBoardModule {}
