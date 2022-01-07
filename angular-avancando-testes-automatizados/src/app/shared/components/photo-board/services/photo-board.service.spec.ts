@@ -1,16 +1,16 @@
-// import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-// import { PhotoBoardService } from './photo-board.service';
+import { PhotoBoardService } from './photo-board.service';
 
-// describe('PhotoBoardService', () => {
-//   let service: PhotoBoardService;
+describe(PhotoBoardService.name, () => {
+  let service: PhotoBoardService;
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(PhotoBoardService);
-//   });
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(PhotoBoardService);
+  });
 
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
