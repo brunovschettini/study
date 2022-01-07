@@ -2,6 +2,7 @@ import { PhotoBoardService } from './../../shared/components/photo-board/service
 import { Photo } from './../../shared/components/photo-board/interfaces/photo';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-photo-list',
@@ -9,8 +10,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./photo-list.component.scss'],
 })
 export class PhotoListComponent implements OnInit {
-  title = 'Angular testing';
   public photos$: Observable<Photo[]>;
+  public fa = { faCircleNotch };
 
   constructor(private service: PhotoBoardService) {}
 

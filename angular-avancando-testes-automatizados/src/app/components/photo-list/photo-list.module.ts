@@ -1,3 +1,4 @@
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PhotoBoardService } from './../../shared/components/photo-board/services/photo-board.service';
 import { PhotoBoardModule } from './../../shared/components/photo-board/photo-board.module';
 import { PhotoFrameModule } from './../../shared/components/photo-frame/photo-frame.module';
@@ -7,7 +8,7 @@ import { PhotoListComponent } from './photo-list.component';
 
 @NgModule({
   declarations: [PhotoListComponent],
-  imports: [CommonModule, PhotoBoardModule],
+  imports: [CommonModule, PhotoBoardModule, FontAwesomeModule],
   exports: [PhotoListComponent],
   providers: [PhotoBoardService],
 })
