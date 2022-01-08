@@ -16,6 +16,16 @@ describe(PhotoListComponent.name, () => {
     await TestBed.configureTestingModule({
       imports: [PhotoListModule, HttpClientModule],
       providers: [PhotoBoardService],
+      // providers: [
+      //   {
+      //     provide: PhotoBoardService,
+      //     useValue: {
+      //       getPhotos(): Observable<Photo[]> {
+      //         return of(buildPhotoList());
+      //       },
+      //     },
+      //   },
+      // ],
     }).compileComponents();
   });
 
@@ -32,10 +42,22 @@ describe(PhotoListComponent.name, () => {
   it('(D) Should display board when data arrives', () => {
     const photos = buildPhotoList();
     spyOn(photoBoardService, 'getPhotos').and.returnValue(of(photos));
+    // spyOn(component['service'], 'getPhotos');
     fixture.detectChanges();
     const loader = fixture.nativeElement.querySelector('.loader');
     const board = fixture.nativeElement.querySelector('app-photo-board');
     expect(loader).withContext('Should display loader').toBeNull();
     expect(board).withContext('Should not display board').not.toBeNull();
+  });
+
+  it('(D) Should display loader while waiting for data', () => {
+    const photos = buildPhotoList();
+    spyOn(photoBoardService, 'getPhotos').and.returnValue(null);
+    //spyOn(component['service'], 'getPhotos').and.returnValue(of(null));
+    fixture.detectChanges();
+    const loader = fixture.nativeElement.querySelector('.loader');
+    const board = fixture.nativeElement.querySelector('app-photo-board');
+    expect(loader).withContext('Should display loader').not.toBeNull();
+    expect(board).withContext('Should not display board').toBeNull();
   });
 });
