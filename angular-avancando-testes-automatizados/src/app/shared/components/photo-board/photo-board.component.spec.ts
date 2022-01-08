@@ -1,20 +1,8 @@
-import { PhotoBoardService } from './services/photo-board.service';
-import { PhotoBoardModule } from './photo-board.module';
-import { Photo } from './interfaces/photo';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PhotoBoardComponent } from './photo-board.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { SimpleChange, SimpleChanges } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-function buildPhotoList(): Photo[] {
-  const photos: Photo[] = [];
-  for (let i = 0; i < 9; i++) {
-    photos.push({ id: i + 1, url: '', description: '' });
-  }
-  return photos;
-}
+import { PhotoBoardModule } from './photo-board.module';
+import { buildPhotoList } from './test/buildPhotoList';
 
 describe(PhotoBoardComponent.name, () => {
   let component: PhotoBoardComponent;
