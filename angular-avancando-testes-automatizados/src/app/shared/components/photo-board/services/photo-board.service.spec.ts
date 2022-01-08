@@ -26,6 +26,10 @@ describe(PhotoBoardService.name, () => {
     httpController = TestBed.inject(HttpTestingController);
   });
 
+  afterEach(() => {
+    httpController.verify();
+  });
+
   it('should be created service', () => {
     expect(service).toBeTruthy();
   });

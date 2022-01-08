@@ -11,16 +11,18 @@ export class PhotoBoardService {
   constructor(private http: HttpClient) {}
 
   public getPhotos(): Observable<Photo[]> {
-    return this.http
-      .get<Photo[]>('http://localhost:3000/photos')
-      .pipe(
-        map((photos) => {
-          return photos.map((photo) => {
-            return { ...photo, description: photo.description.toUpperCase() };
-          });
-        })
-      )
-      .pipe(tap((photos) => console.log(photos)))
-      .pipe(delay(2000));
+    return (
+      this.http
+        .get<Photo[]>('http://localhost:3000/photos')
+        .pipe(
+          map((photos) => {
+            return photos.map((photo) => {
+              return { ...photo, description: photo.description.toUpperCase() };
+            });
+          })
+        )
+        // .pipe(tap((photos) => console.log(photos)))
+        .pipe(delay(2000))
+    );
   }
 }
