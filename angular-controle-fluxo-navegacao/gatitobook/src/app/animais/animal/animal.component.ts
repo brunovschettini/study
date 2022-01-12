@@ -19,7 +19,7 @@ export class AnimalComponent {
     }
   }
 
-  get url() {
+  getUrl() {
     return this.urlOriginal;
   }
 

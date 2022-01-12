@@ -17,6 +17,7 @@ export class AnimaisService {
   ) {}
 
   listaDoUsuario(nomeDoUsuario: string): Observable<Animais> {
+    console.log(API, nomeDoUsuario);
     const token = this.tokenService.retornaToken();
     const headers = new HttpHeaders().append('x-access-token', token);
     return this.httpClient.get<Animais>(`${API}/${nomeDoUsuario}/photos`, {
